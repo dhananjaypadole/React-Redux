@@ -40,9 +40,10 @@ Redux come in UI side only.
 
 **(Video 2)**
 ### Redux Architecture 
-```
-![Redux Architectre](https://static.javatpoint.com/tutorial/reactjs/images/react-redux-architecture.png)
-```
+
+![Redux Architectre](https://static.javatpoint.com/tutorial/reactjs/images/react-redux-architecture.png)   
+
+
 **(Video 3)**
 **(Video 4)**
 **(Video 5)**
