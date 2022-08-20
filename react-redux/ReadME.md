@@ -115,12 +115,48 @@ just remember we can give different name also like to reducer.js we can give ind
  In this video we dont have much only css and html we did to get cart page 
 
  ```
- only thing to remember in this video is that in redux we directly not call component we call component through container   
+ only thing to remember in this video is that in redux we directly not call component we call component through container because we want to use 2 methods those we will see in later videos
  ```  
  means `App <-- Container <-- Component`
 
-
 **(Video 7)**
+### Actions in Redux
+
+In this Video we will learn 
+- what is action
+- make function in action file
+- return data and type
+- Add constant and use constant in action  
+  
+Action : Basically action send data from react to redux store   (`React --> Redux store`)
+
+Example :
+like we have storeroom at our home similarly we have redux store in our application. we can put data in redux store and any component can takeout data from the redux store just like store room we use in our home 
+
+`Action` : send React data(/api data) from react to store 
+`Reducer` : manage the redux store data (whatever data is stored in redux store that reducer manage)
+
+(made changes in action.js file)
+
+src/Action/Action.js
+`Action.js :`
+```
+import {ADD_TO_CART} from '../Constant'
+const addToCart =(data)=>{
+    return {
+        type:'ADD_TO_CART',
+        data:data}
+}
+```
+to tell what type of action we want to perform we have to create such const/functions which is suppose to return object which tell about the `type` and `data`
+
+it is recommended that type should not we string .therefore we imported constant file where we have all type name
+
+`Why we Created Constant.js file ??`
+Ans:
+Type whatever we are returning from action same type we will require in reducer so to keep that same and in sync we have created 1 separte file called constat.js we will declare all there and use that furter.
+
+
 **(Video 8)**
 **(Video 9)**
 **(Video 10)**
