@@ -141,10 +141,10 @@ like we have storeroom at our home similarly we have redux store in our applicat
 src/Action/Action.js
 `Action.js :`
 ```
-import {ADD_TO_CART} from '../Constant'
+import {ADD_TO_CART} from '../Constants'
 const addToCart =(data)=>{
     return {
-        type:'ADD_TO_CART',
+        type:ADD_TO_CART,
         data:data}
 }
 ```
@@ -152,12 +152,34 @@ to tell what type of action we want to perform we have to create such const/func
 
 it is recommended that type should not we string .therefore we imported constant file where we have all type name
 
-`Why we Created Constant.js file ??`
+**Why we Created Constant.js file ??**    
 Ans:
 Type whatever we are returning from action same type we will require in reducer so to keep that same and in sync we have created 1 separte file called constat.js we will declare all there and use that furter.
 
+**(Video 8)**  
+### Reducer and RootReducer  
 
-**(Video 8)**
+**Reducer**  
+Basically reducer will receive data from action and and it will filterout and deceive which objcet have to update and send it to store 
+
+rootreducer.js file we can also name it as index.js and it is basically use to combine all other reducers and in reducer.js file we have our switch cases.  
+
+here onward code is written in Reducer/index.js and Reducer/Reducer.js file and theory is written over here   
+
+- In reducer.js file we have created const variable as the function we created require that as parameter.
+- in our code in reducer we have function cardItem it require 2 arguments one is state(/initial state) and 2nd is action
+- in reducer we require switch case as there can be multiple operation that we want to perform so for those we require switch case in reducer
+- in reducer use if InitialState and action argument is very imp action is use to get the operation we want to perform and initialState is use while performing the operation (best way to nder stand refer the code)  
+- whatever state we are using in reducer that nothing to do with the state of the component. that is state of application you can say 
+- as we know that there can be only `one store` in `one application` but we can have multiple reducer in application so those reducer we have to merge in rootReducer(/Reducer/index.js)
+
+`rootreducer`
+-remember in rootreducer we require 2 imp thing 
+1) combineReducer from redux and export the same 
+  `import { combineReducers } from 'react-redux'`
+2) also import reducer.js
+
+
 **(Video 9)**
 **(Video 10)**
 **(Video 11)**
