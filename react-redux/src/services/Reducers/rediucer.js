@@ -4,11 +4,11 @@ const initialState={
 }
 
 export default function cardItem(state= initialState ,action){
-switch (action.type) {
+switch (action.type) {  // checking what type of action we have to perform
     case ADD_TO_CART:
         return {
-            ...state,
-            cardData: action.data
+            ...state,  // take the inital state 
+            cardData: action.data  //updation data which we git from Action
         }
         break;
 

@@ -173,14 +173,48 @@ here onward code is written in Reducer/index.js and Reducer/Reducer.js file and 
 - whatever state we are using in reducer that nothing to do with the state of the component. that is state of application you can say 
 - as we know that there can be only `one store` in `one application` but we can have multiple reducer in application so those reducer we have to merge in rootReducer(/Reducer/index.js)
 
-`rootreducer`
--remember in rootreducer we require 2 imp thing 
+`rootreducer`  
+-remember in rootreducer we require 2 imp thing   
 1) combineReducer from redux and export the same 
-  `import { combineReducers } from 'react-redux'`
+  `import { combineReducers } from 'react-redux'`  
 2) also import reducer.js
 
+**(Video 9)**  
+### Container - mapDispatchToProps - mapStateToProps
 
-**(Video 9)**
+what we will see in this video:  
+- what is container 
+- connect react and redux
+- import react-redux, action and component
+- use `mapDispatcheToProps`
+- use `mapStateToProps`
+  
+`Container` : is use to connect react and redux  
+`mapDispatcheToProps`: save data from Component to store (component --> store)
+`mapStateToPr0ps` : send data from store to components (stire --> components)
+
+(can use any name other than `mapDispatcheToProps`or `mapStateToPrps`)
+
+below things need to import in conainer/HomeContainer.js file
+- import `connexct` like  import {connect} from 'react-redux'   //use to connect react with redux
+- import `Action`   like  import {addToCart} from '../services/Actions/Action'
+- write `mapDispatcheToProps` function 
+- write `mapStateToPr0ps` function
+- export `connect` function  with 2 parameter and home component 
+  
+  ```
+  const mapStateToProps=state=>({
+    // data:state.cardItems
+})  
+
+const mapDispatchToProps=dispatch=>({
+    addToCartHandler:data=>dispatch(addToCart(data)) 
+}) 
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(Home)  
+```
+
 **(Video 10)**
 **(Video 11)**
 **(Video 12)**
