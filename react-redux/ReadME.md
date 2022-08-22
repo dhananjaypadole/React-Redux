@@ -200,17 +200,17 @@ below things need to import in conainer/HomeContainer.js file
 - import `Action`   like  import {addToCart} from '../services/Actions/Action'
 - write `mapDispatcheToProps` function 
 - write `mapStateToPr0ps` function
-- export `connect` function  with 2 parameter and home component 
-  
-  ```
+- export `connect` function  with 2 parameter and home component   
+
+``` 
   const mapStateToProps=state=>({
-    // data:state.cardItems
-})  
+  data:state.cardItems
+}) 
+
 
 const mapDispatchToProps=dispatch=>({
     addToCartHandler:data=>dispatch(addToCart(data)) 
 }) 
-
 
 export default connect(mapStateToProps,mapDispatchToProps)(Home)  
 ```
