@@ -1,14 +1,16 @@
-import React from 'react'
-import ReactDOM, { render }  from 'react-dom/client'
-import HomeContainer from './Containers/HomeContainer';
-import './App.css'
-
-const App = ()=>{
-return(
-    <>
-   <HomeContainer></HomeContainer>
-    </>
-)    
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+import HomeContainer from './containers/HomeContainer'
+import HeaderContainer from './containers/HeaderContainer'
+function App() {
+  return (
+    <div className="App">
+      <HeaderContainer />
+     
+      <HomeContainer />
+    </div>
+  );
 }
 
 export default App;

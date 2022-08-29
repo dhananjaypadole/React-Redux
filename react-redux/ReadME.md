@@ -1,5 +1,6 @@
 # React-Redux
-Youtube series by `code step by step` video series name `react redux tutorial in hindi`
+Youtube series by `code step by step` video series name `react redux tutorial in hindi`.   
+`github link` : https://github.com/anil-sidhu/redux-tut
 
 In this project we will learn about react and redux. we can use redux with other framework or labrary also. like we can use redux with angular or vue also 
 
@@ -216,6 +217,59 @@ export default connect(mapStateToProps,mapDispatchToProps)(Home)
 ```
 
 **(Video 10)**
+### complete flow (IMP)
+what we will learn 
+- Make Redux wrapper in index file
+- what is provider 
+- make Store 
+- check data flow in console
+- Call action on button click
+  
+  In this video we will do major coding in index.js file
+  `index.js`
+  - 1) import `createStore` import {createStore} from redux'
+  - 2) import `provider` import {Provider} from 'react-redux' // provider will flow all data throughout react application
+  - import `rootReducer` import rootReducer from './service/reducers/index'
+
+
+```
+// as we know 1 appliaction have 1 store therefore we are creating single store from rootReducer
+const store=createStore(rootReducer) 
+
+//using this prop store we are adding reducers data to react application so any component can get data from that 
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
+```
+
+Theory :
+In REdux side 
+`HomeContainer.js`:  Add state(data) in data(variavke) in mapStateToProps() method
+`Index.js`:  from index idex.js we send data through props that data we holds in HomeComponent  
+`HomeCompoent`: in homecompoent we get prop and onClick we forwarded that prop to Homecontainer   
+remember function name of onClick is same as the function present in homeContainer   
+`Action` : no need to separaetly pass teh data as we are passing via object we created that type and data one 
+```
+const addToCart =(data)=>{
+    return {
+        type:ADD_TO_CART,
+        data:data} // here we are passing to reducer 
+```
+`Reducer`: In reducer in switch case we will get the data 
+
+`data flow in application`
+HomeContainer(mapStateToProps() method) --> index.js(srtore data)  --> homeComponent (onClick Trigger) --> Action  --> Reducer 
+
 **(Video 11)**
+### Add item in cart  
+- Add Data in cart
+- get 1 item in cart item 
+- Make some style for cart item 
+- Push multiple item in cart
+- Show multiple count in cart
+
 **(Video 12)**
 **(Video 13)**

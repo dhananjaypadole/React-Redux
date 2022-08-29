@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Home = () => {
-  return (
-    <div>
+function Home(props) {
+    return (
+        <div>
            
             <h1>Home Component</h1>
             <div className="cart-wrapper">
@@ -26,8 +26,6 @@ const Home = () => {
                 </div>
             </div>
         </div>
-  )
+    )
 }
-
 export default Home
-
