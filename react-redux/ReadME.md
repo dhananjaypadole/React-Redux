@@ -5,7 +5,7 @@ Youtube series by `code step by step` video series name `react redux tutorial in
 In this project we will learn about react and redux. we can use redux with other framework or labrary also. like we can use redux with angular or vue also 
 
 ## Topics of Series
-- Intriduction
+- Introduction
 - Redux Architechture 
 - Props in redux
 - install redux with react 
@@ -20,7 +20,7 @@ In this project we will learn about react and redux. we can use redux with other
 - Interview question on redux 
   
 
-  **(Video 1)**
+  ## (Video 1)
   ## Introduction 
 - what is redux
 - why we need it 
@@ -40,7 +40,7 @@ In component based development like in angular and react we need redux to make c
 Redux come in UI side only.
 
 
-**(Video 2)**
+## (Video 2)
 ## Redux Architecture 
 
 ![Redux Architectre](https://static.javatpoint.com/tutorial/reactjs/images/react-redux-architecture.png)   
@@ -51,13 +51,16 @@ Redux come in UI side only.
 Other fieds are self explanatory 
 - remember data flow in in one direction only (it will follow sequence)      
    
-**(Video 3)**
+## (Video 3)
 ### React with redux installation
 
+node,react,redux,react-redux
+
 - check npm and node
-- install react js 
-- install redux 
-- install react-redux   (to link react with redux)
+- install `react js` 
+- install `redux` 
+- install `react-redux`   (to link react with redux)
+
 
 - check npm and node
   ```
@@ -69,17 +72,19 @@ Other fieds are self explanatory
   npx create-react-app application_name
   ```
 - install redux 
-  ``` npm redux
+  ``` 
+  npm redux
    ```
 - install react-redux   
-``` npm react-redux
-   ```
+``` 
+npm react-redux
+```
 
-**(Video 4)**
+## (Video 4)
 ### Props revision
 No Need of this video if you know about aboyt props and how to pass data using props  
 
-**(Video 5)**
+## (Video 5)
 ### File and folder structure `(IMP)`
 
 It is good practise if we follow below folder structure as same folder str. is followed on redux offical website.
@@ -110,7 +115,7 @@ Service
 ```
 
 just remember we can give different name also like to reducer.js we can give index.js also 
-**(Video 6)**  
+## (Video 6)  
  ### Design for add to cart
 
  In this video we dont have much only css and html we did to get cart page 
@@ -118,9 +123,12 @@ just remember we can give different name also like to reducer.js we can give ind
  ```
  only thing to remember in this video is that in redux we directly not call component we call component through container because we want to use 2 methods those we will see in later videos
  ```  
- means `App <-- Container <-- Component`
+ means `App <-- Container <-- Component` 
 
-**(Video 7)**
+containers are also called as smart-components and   
+components are also called as dum-components
+
+## (Video 7)
 ### Actions in Redux
 
 In this Video we will learn 
@@ -134,7 +142,7 @@ Action : Basically action send data from react to redux store   (`React --> Redu
 Example :
 like we have storeroom at our home similarly we have redux store in our application. we can put data in redux store and any component can takeout data from the redux store just like store room we use in our home 
 
-`Action` : send React data(/api data) from react to store 
+`Action` : send React data(/api data) from react to store   
 `Reducer` : manage the redux store data (whatever data is stored in redux store that reducer manage)
 
 (made changes in action.js file)
@@ -157,7 +165,7 @@ it is recommended that type should not we string .therefore we imported constant
 Ans:
 Type whatever we are returning from action same type we will require in reducer so to keep that same and in sync we have created 1 separte file called constat.js we will declare all there and use that furter.
 
-**(Video 8)**  
+## (Video 8)  
 ### Reducer and RootReducer  
 
 **Reducer**  
@@ -180,7 +188,7 @@ here onward code is written in Reducer/index.js and Reducer/Reducer.js file and 
   `import { combineReducers } from 'react-redux'`  
 2) also import reducer.js
 
-**(Video 9)**  
+## (Video 9)  
 ### Container - mapDispatchToProps - mapStateToProps
 
 what we will see in this video:  
@@ -216,7 +224,7 @@ const mapDispatchToProps=dispatch=>({
 export default connect(mapStateToProps,mapDispatchToProps)(Home)  
 ```
 
-**(Video 10)**
+## (Video 10)
 ### complete flow (IMP)
 what we will learn 
 - Make Redux wrapper in index file
@@ -263,7 +271,7 @@ const addToCart =(data)=>{
 `data flow in application`
 HomeContainer(mapStateToProps() method) --> index.js(srtore data)  --> homeComponent (onClick Trigger) --> Action  --> Reducer 
 
-**(Video 11)**
+## (Video 11)
 ### Add item in cart  
 - Add Data in cart
 - get 1 item in cart item 
@@ -271,5 +279,5 @@ HomeContainer(mapStateToProps() method) --> index.js(srtore data)  --> homeCompo
 - Push multiple item in cart
 - Show multiple count in cart
 
-**(Video 12)**
-**(Video 13)**
+## (Video 12)
+## (Video 13)
