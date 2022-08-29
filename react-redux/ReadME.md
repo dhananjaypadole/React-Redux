@@ -186,8 +186,36 @@ here onward code is written in Reducer/index.js and Reducer/Reducer.js file and 
 -remember in rootreducer we require 2 imp thing   
 1) combineReducer from redux and export the same 
   `import { combineReducers } from 'react-redux'`  
-2) also import reducer.js
+2) also import reducer.js  
 
+`reducer/reducer.js`
+```
+import { ADD_TO_CART } from '../constants'
+const initialState = {
+    cardData: []
+}
+export default function cardItems(state = [], action) {
+    switch (action.type) {
+        case ADD_TO_CART:
+            // console.warn("reducer",action)
+            return [
+                ...state,
+                {cardData: action.data}
+            ]
+        default:
+            return state
+    }
+}
+```
+`reducer/rootreducer.js`
+```
+import {combineReducers} from 'redux'
+import cardItems from './reducer'
+
+export default combineReducers({
+    cardItems,
+})
+```
 ## (Video 9)  
 ### Container - mapDispatchToProps - mapStateToProps
 
