@@ -227,13 +227,13 @@ what we will see in this video:
 - use `mapStateToProps`
   
 `Container` : is use to connect react and redux  
-`mapDispatcheToProps`: save data from Component to store (component --> store)
-`mapStateToPr0ps` : send data from store to components (stire --> components)
+`mapDispatcheToProps`: save data from Component to store (component --> store)  
+`mapStateToPr0ps` : send data from store to components store --> components)
 
 (can use any name other than `mapDispatcheToProps`or `mapStateToPrps`)
 
 below things need to import in conainer/HomeContainer.js file
-- import `connexct` like  import {connect} from 'react-redux'   //use to connect react with redux
+- import `connect` like  import {connect} from 'react-redux'   //use to connect react with redux
 - import `Action`   like  import {addToCart} from '../services/Actions/Action'
 - write `mapDispatcheToProps` function 
 - write `mapStateToPr0ps` function
@@ -307,5 +307,31 @@ HomeContainer(mapStateToProps() method) --> index.js(srtore data)  --> homeCompo
 - Push multiple item in cart
 - Show multiple count in cart
 
+In this video we dont have any concept just to get the count we use {props.data.length} in home.js file.
+other than that in this video there nothing but did css and html ony 
+
 ## (Video 12)
+### Share Data between components
+
+this is video we not transfer data from one component to another. we were doing everything in one component only .
+
+- so we have created 1 header compoent and in that we kept only icon + data count {props.datra.length}
+- we have also created `Header.Container.js`  and copy paseted whatever we have in home.container in header container and renamed it 
+  for better understanding see file header.container.js
+
+  `summary`:
+  in this video we have just cerated header.component.js and header.container.js and copy pasted from home.conponent.js and container.js and renamed variavles  and imported same in app.js and by doing this we easily do the count from home component to header component.
+
+
 ## (Video 13)
+### Remove to cart
+in this video we have created one more button to remove data from cart.
+and did all the same we what we have did to add the data   
+
+- in `action` created one more function with name 'removeToCart'
+- in `constant.js` added one more constant for removeToCart. and imported inside action
+- in `Home.Container.js` added the variable (beside addToCart).  
+   and in the same file we have added same thing in `mapDispatchToProps()` function with different name 
+`to check weather it is working or not we can check that inside Home.js file by doing console.log(props)`
+- so now we have to add same functions in action and reducer as we have added from addToCart and to check that we can add logs and to remove we can use pop() function ... for better understanding you can see file  
+
