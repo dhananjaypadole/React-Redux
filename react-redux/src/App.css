@@ -59,6 +59,10 @@
     right: 1%;
     top: 1%;
 }
+button.remove-cart-btn{
+  background-color: aqua;
+  margin-top: 10px;
+}
 .cart-count{
   
     position: absolute;
